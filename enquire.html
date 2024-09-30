@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELIX MAINA MWANGI CIT-223-062/2022</title>
+    <style>
+        body {
+            background-image: url(bg\ 8.jpg);
+            background-position: center;
+            color: white;
+            font-size: 20px;
+            
+        }
+        header {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 45px;
+            text-transform: uppercase;
+    
+        }
+        #form{
+            text-align: center;
+        }
+        footer{
+            font-size: 15px;
+            text-align: center;
+            background-color: bisque;
+            color: cyan;
+        }
+        a:hover{
+            color:blueviolet;
+        }
+        select {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid aqua;
+            border-radius: 10px;
+        }
+        #my-form{
+            text-align: center;
+        }
+        #btn{
+            margin-bottom: 30px;
+            border-radius: 8px;
+            font-size: 20px;
+            color: green;
+            padding: 4px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>enquiry form</header>
+    <div>
+        <p>The form below offers customers the chance to enquire on particular products.It is also a  form that gives you, as the customer, the chance to forward any questions,complaints and recommendations to our company. <br> Feel free to express yourself freely as we gladly appreiate your feedback.</p>
+    </div>
+    <div id="form">
+        <form action="/about.html" method="post">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" size="30"><br><br>
+            <label for="location">Location</label><br>
+            <input type="text" id="location" name="location" size="30"><br><br>
+            <label for="Email">E-mail</label><br>
+            <input type="text" id="Email" size="30"><br><br>
+            <label for="phone">Phone Number</label><br>
+            <input type="text" id="phone" size="30"><br><br>
+
+            <label for="Issue">Please Select the Issue you wish to address and you can give additional details in the text box at the bottom of the page.</label>
+
+            <select id="issue" name="issue">
+                <option value="Inquire About Parts">Inquire About Parts</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Compliments">Compliments</option>
+                <option value="Customer Review">Customer Review</option>
+
+            </select>
+            
+            
+            <p>Please choose the delivery option you prefer:</p>
+            <input type="radio" id="home" name="home">
+            <label for="home">Doorstep Delivery</label>
+            <input type="radio" id="CBD" name="home">
+            <label for="CBD">Within the CBD</label>
+        </form>
+    </div>
+    <div id="form2">
+        <form  id="my-form">
+            <p>The section below is provided to the customer whereby they can express their comments,compliments and even complaints concerning our service delivery </p>
+            <textarea name="comments" id="comments" cols="60" rows="30" placeholder="Enter additional details  here... "></textarea><br><br>
+
+
+            <button type="submit" id="btn">SUBMIT</button>
+
+        </form>
+    </div>
+    <footer>
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="product.html"  target="_blank">PRODUCTS</a>
+        <a href="contact.html"  target="_blank">CONTACT US</a>
+        <p>All Rights Reserved <br> Maridadi Auto Spares <br> 2024</p>
+        <p>FELIX MAINA CIT-223-062/2022</p>
+        
+    </footer>
+
+    <!-- Internal JavaScript -->
+    <script>
+        document.getElementById('issue').addEventListener('change', function() {
+            alert('You selected: ' + this.value);
+        });
+        document.getElementById('my-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        alert('Form submitted!');
+  });
+    </script>
+</body>
+</html>
